@@ -1,3 +1,30 @@
+import {
+  SiJavascript,
+  SiTypescript,
+  SiPython,
+  SiCplusplus,
+  SiRust,
+  SiHtml5,
+  SiCss3,
+  SiReact,
+  SiNextdotjs,
+  SiNodedotjs,
+  SiPytorch,
+  SiNumpy,
+  SiPandas,
+  SiPostgresql,
+  SiSupabase,
+  SiSqlite,
+  SiVercel,
+  SiRender,
+  SiDocker,
+  SiLinux,
+  SiGit,
+  SiExpo,
+  SiOnnx,
+} from 'react-icons/si';
+import { BiData } from 'react-icons/bi';
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -67,11 +94,87 @@ export default function Home() {
         id="projects"
         className="min-h-screen pt-32 px-8 bg-white dark:bg-gray-900"
       >
-        <h2 className="text-3xl font-mono flex items-center gap-3">
+        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
           <span className="text-white">projects</span>
           <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
         </h2>
+
+        <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
+          {/* Project 1: Chess Engine */}
+          <div className="flex flex-col items-center">
+            <div className="w-80 bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+              {/* Clickable Image Area */}
+              <a
+                href="https://google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-48 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
+              >
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  Image Placeholder
+                </span>
+              </a>
+
+              {/* Non-clickable Content Area */}
+              <div className="p-6 bg-gray-800">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Chess Engine
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  Placeholder description for Chess Engine project
+                </p>
+              </div>
+            </div>
+
+            {/* Learn More Button */}
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 px-6 py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Learn More
+            </a>
+          </div>
+
+          {/* Project 2: Conversationalist AI */}
+          <div className="flex flex-col items-center">
+            <div className="w-80 bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+              {/* Clickable Image Area */}
+              <a
+                href="https://google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-48 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
+              >
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                  Image Placeholder
+                </span>
+              </a>
+
+              {/* Non-clickable Content Area */}
+              <div className="p-6 bg-gray-800">
+                <h3 className="text-2xl font-bold text-white mb-3">
+                  Conversationalist AI
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  Placeholder description for Conversationalist AI project
+                </p>
+              </div>
+            </div>
+
+            {/* Learn More Button */}
+            <a
+              href="https://google.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 px-6 py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* Skills Section */}
@@ -79,11 +182,125 @@ export default function Home() {
         id="skills"
         className="min-h-screen pt-32 px-8 bg-gray-50 dark:bg-gray-800"
       >
-        <h2 className="text-3xl font-mono flex items-center gap-3">
+        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
           <span className="text-white">skills</span>
           <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
         </h2>
+
+        <div className="max-w-7xl mx-auto space-y-16">
+          {/* LANGUAGES */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-6">LANGUAGES</h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4">
+              {[
+                { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
+                { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
+                { icon: SiPython, name: 'Python', color: '#3776AB' },
+                { icon: SiCplusplus, name: 'C++', color: '#00599C' },
+                { icon: SiRust, name: 'Rust', color: '#CE422B' },
+                { icon: BiData, name: 'SQL', color: '#CC2927' },
+                { icon: SiHtml5, name: 'HTML', color: '#E34F26' },
+                { icon: SiCss3, name: 'CSS', color: '#1572B6' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* FRAMEWORKS / RUNTIMES */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-6">FRAMEWORKS / RUNTIMES</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { icon: SiReact, name: 'React', color: '#61DAFB' },
+                { icon: SiNextdotjs, name: 'Next.js', color: '#FFFFFF' },
+                { icon: SiReact, name: 'React Native', color: '#61DAFB' },
+                { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
+                { icon: SiExpo, name: 'Expo', color: '#000020' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* MACHINE LEARNING */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-6">MACHINE LEARNING</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { icon: SiPytorch, name: 'PyTorch', color: '#EE4C2C' },
+                { icon: SiNumpy, name: 'NumPy', color: '#013243' },
+                { icon: SiPandas, name: 'Pandas', color: '#150458' },
+                { icon: SiOnnx, name: 'ONNX', color: '#005CED' },
+                { icon: BiData, name: 'Ollama', color: '#FFFFFF' },
+                { icon: BiData, name: 'Whisper', color: '#10A37F' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* DATABASES & BACKEND SERVICES */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-6">DATABASES & BACKEND SERVICES</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[
+                { icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
+                { icon: SiSqlite, name: 'SQLite', color: '#003B57' },
+                { icon: SiSupabase, name: 'Supabase', color: '#3ECF8E' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CLOUD & DEVOPS */}
+          <div>
+            <h3 className="text-2xl font-semibold text-white mb-6">CLOUD & DEVOPS</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { icon: SiVercel, name: 'Vercel', color: '#FFFFFF' },
+                { icon: SiRender, name: 'Render', color: '#46E3B7' },
+                { icon: SiDocker, name: 'Docker', color: '#2496ED' },
+                { icon: SiLinux, name: 'Linux', color: '#FCC624' },
+                { icon: SiGit, name: 'Git', color: '#F05032' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* About Section */}
