@@ -65,40 +65,48 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="min-h-screen pt-20 bg-white dark:bg-gray-900 flex items-center justify-center"
+        className="min-h-screen pt-32 px-8 bg-white dark:bg-gray-900"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-          Projects
+        <h2 className="text-3xl font-mono flex items-center gap-3">
+          <span className="text-purple-500">#</span>
+          <span className="text-white">projects</span>
+          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
         </h2>
       </section>
 
       {/* Skills Section */}
       <section
         id="skills"
-        className="min-h-screen pt-20 bg-gray-50 dark:bg-gray-800 flex items-center justify-center"
+        className="min-h-screen pt-32 px-8 bg-gray-50 dark:bg-gray-800"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-          Skills
+        <h2 className="text-3xl font-mono flex items-center gap-3">
+          <span className="text-purple-500">#</span>
+          <span className="text-white">skills</span>
+          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
         </h2>
       </section>
 
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen pt-20 bg-white dark:bg-gray-900 flex items-center justify-center"
+        className="min-h-screen pt-32 px-8 bg-white dark:bg-gray-900"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-          About Me
+        <h2 className="text-3xl font-mono flex items-center gap-3">
+          <span className="text-purple-500">#</span>
+          <span className="text-white">about</span>
+          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
         </h2>
       </section>
 
       {/* Contact Section */}
       <section
         id="contact"
-        className="min-h-screen pt-20 bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center"
+        className="min-h-screen pt-32 px-8 bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-800 dark:to-gray-900"
       >
-        <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-          Contact
+        <h2 className="text-3xl font-mono flex items-center gap-3">
+          <span className="text-purple-500">#</span>
+          <span className="text-white">contact</span>
+          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
         </h2>
       </section>
     </div>
