@@ -1,3 +1,5 @@
+'use client';
+
 import {
   SiJavascript,
   SiTypescript,
@@ -41,7 +43,7 @@ export default function Home() {
                   href="#home"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  Home
+                  #home
                 </a>
               </li>
               <li>
@@ -49,7 +51,7 @@ export default function Home() {
                   href="#projects"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  Projects
+                  #projects
                 </a>
               </li>
               <li>
@@ -57,7 +59,7 @@ export default function Home() {
                   href="#skills"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  Skills
+                  #skills
                 </a>
               </li>
               <li>
@@ -65,7 +67,7 @@ export default function Home() {
                   href="#about"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  About
+                  #about
                 </a>
               </li>
               <li>
@@ -73,7 +75,7 @@ export default function Home() {
                   href="#contact"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  Contact
+                  #contact
                 </a>
               </li>
             </ul>
@@ -81,12 +83,54 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero/Home Section - Empty for now */}
+      {/* Hero/Home Section */}
       <section
         id="home"
-        className="min-h-screen pt-20 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800"
+        className="min-h-screen pt-20 bg-gradient-to-br from-gray-900 to-gray-800 relative"
       >
-        {/* Empty section - to be filled later */}
+        {/* Main Content - Centered */}
+        <div className="flex flex-col items-center justify-center text-center px-8 min-h-screen">
+          <div className="py-20">
+            {/* Main Heading */}
+            <h1 className="text-7xl font-bold text-white mb-6">
+              Dane Froelicher
+            </h1>
+
+            {/* Subheading */}
+            <h2 className="text-3xl font-semibold text-purple-400 mb-12">
+              Developer. Automator. ML Engineer.
+            </h2>
+
+            {/* Body Text */}
+            <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl">
+              I build intelligent systems that solve real problems.
+              <br />
+              Chess engines. Conversational AI. Automated workflows.
+            </p>
+          </div>
+        </div>
+
+        {/* Bouncing Arrow - Bottom Center */}
+        <a
+          href="#projects"
+          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-purple-500 hover:text-purple-400 transition-colors cursor-pointer"
+          aria-label="Scroll to projects"
+        >
+          <svg
+            className="w-12 h-12 animate-bounce"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M19 14l-7 7m0 0l-7-7m7 7V3"
+            />
+          </svg>
+        </a>
       </section>
 
       {/* Projects Section */}
@@ -97,7 +141,7 @@ export default function Home() {
         <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
           <span className="text-white">projects</span>
-          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
+          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
@@ -185,7 +229,7 @@ export default function Home() {
         <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
           <span className="text-white">skills</span>
-          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
+          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
         <div className="max-w-7xl mx-auto space-y-16">
@@ -311,7 +355,7 @@ export default function Home() {
         <h2 className="text-3xl font-mono flex items-center gap-3">
           <span className="text-purple-500">#</span>
           <span className="text-white">about</span>
-          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
+          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
       </section>
 
@@ -323,7 +367,7 @@ export default function Home() {
         <h2 className="text-3xl font-mono flex items-center gap-3">
           <span className="text-purple-500">#</span>
           <span className="text-white">contact</span>
-          <span className="text-purple-500 flex-1 border-t border-purple-500"></span>
+          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
       </section>
     </div>
