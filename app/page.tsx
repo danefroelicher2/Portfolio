@@ -86,34 +86,32 @@ export default function Home() {
       {/* Hero/Home Section */}
       <section
         id="home"
-        className="min-h-screen pt-20 bg-gradient-to-br from-gray-900 to-gray-800 relative"
+        className="min-h-screen pt-20 bg-gradient-to-br from-gray-900 to-gray-800 relative flex items-center justify-center"
       >
-        {/* Main Content - Centered */}
-        <div className="flex flex-col items-center justify-center text-center px-8 min-h-screen">
-          <div className="py-20">
-            {/* Main Heading */}
-            <h1 className="text-7xl font-bold text-white mb-6">
-              Dane Froelicher
-            </h1>
+        {/* Main Content - Positioned in Upper-Center */}
+        <div className="flex flex-col items-center text-center px-8 -translate-y-12">
+          {/* Main Heading */}
+          <h1 className="text-7xl font-bold text-white mb-6">
+            Dane Froelicher
+          </h1>
 
-            {/* Subheading */}
-            <h2 className="text-3xl font-semibold text-purple-400 mb-12">
-              Developer. Automator. ML Engineer.
-            </h2>
+          {/* Subheading */}
+          <h2 className="text-3xl font-semibold text-purple-400 mb-12">
+            Developer. Automator. ML Engineer.
+          </h2>
 
-            {/* Body Text */}
-            <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl">
-              I build intelligent systems that solve real problems.
-              <br />
-              Chess engines. Conversational AI. Automated workflows.
-            </p>
-          </div>
+          {/* Body Text */}
+          <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl">
+            I build intelligent systems that solve real problems.
+            <br />
+            Chess engines. Conversational AI. Automated workflows.
+          </p>
         </div>
 
         {/* Bouncing Arrow - Bottom Center */}
         <a
           href="#projects"
-          className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-purple-500 hover:text-purple-400 transition-colors cursor-pointer"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-purple-500 hover:text-purple-400 transition-colors cursor-pointer"
           aria-label="Scroll to projects"
         >
           <svg
@@ -136,7 +134,7 @@ export default function Home() {
       {/* Projects Section */}
       <section
         id="projects"
-        className="min-h-screen pt-32 px-8 bg-white dark:bg-gray-900"
+        className="bg-gray-900 py-20 px-8"
       >
         <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
@@ -224,7 +222,7 @@ export default function Home() {
       {/* Skills Section */}
       <section
         id="skills"
-        className="min-h-screen pt-32 px-8 bg-gray-50 dark:bg-gray-800"
+        className="bg-gray-900 py-20 px-8"
       >
         <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
@@ -350,9 +348,9 @@ export default function Home() {
       {/* About Section */}
       <section
         id="about"
-        className="min-h-screen pt-32 px-8 bg-white dark:bg-gray-900"
+        className="bg-gray-900 py-20 px-8"
       >
-        <h2 className="text-3xl font-mono flex items-center gap-3">
+        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
           <span className="text-white">about</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
@@ -362,9 +360,9 @@ export default function Home() {
       {/* Contact Section */}
       <section
         id="contact"
-        className="min-h-screen pt-32 px-8 bg-gradient-to-br from-indigo-50 to-blue-100 dark:from-gray-800 dark:to-gray-900"
+        className="bg-gray-900 py-20 px-8"
       >
-        <h2 className="text-3xl font-mono flex items-center gap-3">
+        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
           <span className="text-white">contact</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
