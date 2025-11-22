@@ -145,25 +145,25 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
           {/* Project 1: Chess Engine */}
           <div className="flex flex-col items-center">
-            <div className="w-80 bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+            <div className="w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
               {/* Clickable Image Area */}
               <a
-                href="https://google.com"
+                href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block h-48 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
+                className="block h-80 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
               >
-                <span className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors text-lg">
                   Image Placeholder
                 </span>
               </a>
 
               {/* Non-clickable Content Area */}
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold text-white mb-3">
+              <div className="p-8 bg-gray-800">
+                <h3 className="text-3xl font-bold text-white mb-4">
                   Chess Engine
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed text-lg">
                   Placeholder description for Chess Engine project
                 </p>
               </div>
@@ -174,7 +174,7 @@ export default function Home() {
               href="https://google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 px-6 py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg"
+              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
             >
               Learn More
             </a>
@@ -182,25 +182,25 @@ export default function Home() {
 
           {/* Project 2: Conversationalist AI */}
           <div className="flex flex-col items-center">
-            <div className="w-80 bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
+            <div className="w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
               {/* Clickable Image Area */}
               <a
-                href="https://google.com"
+                href="https://github.com/danefroelicher2/conversationalist-ai"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block h-48 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
+                className="block h-80 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
               >
-                <span className="text-gray-400 group-hover:text-gray-300 transition-colors">
+                <span className="text-gray-400 group-hover:text-gray-300 transition-colors text-lg">
                   Image Placeholder
                 </span>
               </a>
 
               {/* Non-clickable Content Area */}
-              <div className="p-6 bg-gray-800">
-                <h3 className="text-2xl font-bold text-white mb-3">
+              <div className="p-8 bg-gray-800">
+                <h3 className="text-3xl font-bold text-white mb-4">
                   Conversationalist AI
                 </h3>
-                <p className="text-gray-400 leading-relaxed">
+                <p className="text-gray-400 leading-relaxed text-lg">
                   Placeholder description for Conversationalist AI project
                 </p>
               </div>
@@ -211,7 +211,7 @@ export default function Home() {
               href="https://google.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 px-6 py-2 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg"
+              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
             >
               Learn More
             </a>
