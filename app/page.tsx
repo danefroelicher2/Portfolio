@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import {
   SiJavascript,
   SiTypescript,
@@ -362,11 +363,15 @@ export default function Home() {
                 href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block h-80 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
+                className="block h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 group overflow-hidden"
               >
-                <span className="text-gray-400 group-hover:text-gray-300 transition-colors text-lg">
-                  Image Placeholder
-                </span>
+                <Image
+                  src="/images/chess.png"
+                  alt="Chess Engine"
+                  fill
+                  className="object-cover object-[center_bottom]"
+                  sizes="540px"
+                />
               </a>
 
               {/* Non-clickable Content Area */}
@@ -382,7 +387,7 @@ export default function Home() {
 
             {/* Learn More Button */}
             <a
-              href="https://google.com"
+              href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
@@ -440,6 +445,64 @@ export default function Home() {
           <span className="text-white">about</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
+
+        <div className="max-w-6xl mx-auto">
+          {/* Two Column Layout */}
+          <div className="flex gap-16 items-center">
+            {/* LEFT SIDE: Image (40%) */}
+            <div className="w-[40%] flex-shrink-0">
+              <div className="relative rounded-xl overflow-hidden shadow-2xl border-2 border-purple-500/20">
+                <Image
+                  src="/images/me.jpeg"
+                  alt="Profile"
+                  width={500}
+                  height={500}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+
+            {/* RIGHT SIDE: Content (60%) */}
+            <div className="w-[60%] space-y-8">
+              {/* Section 1: Intro */}
+              <div>
+                <p className="text-xl text-gray-200 leading-relaxed font-light">
+                  I'm a software developer passionate about building intelligent systems that solve real problems. I specialize in automation, machine learning, and full-stack development—turning complex challenges into elegant solutions.
+                </p>
+              </div>
+
+              {/* Section 2: Background */}
+              <div>
+                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                  <span>📚</span> Background
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  I studied [Computer Science/relevant field] at [University Name], where I developed a deep interest in artificial intelligence and software architecture. My journey has taken me from building chess engines with reinforcement learning to creating conversational AI systems.
+                </p>
+              </div>
+
+              {/* Section 3: What I Do */}
+              <div>
+                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                  <span>💻</span> What I Build
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  I focus on projects at the intersection of AI and practical application—whether that's developing machine learning pipelines, crafting responsive web applications, or exploring new ways to make technology more intuitive and accessible.
+                </p>
+              </div>
+
+              {/* Section 4: Beyond Code */}
+              <div>
+                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                  <span>✨</span> Beyond Code
+                </h3>
+                <p className="text-gray-300 leading-relaxed">
+                  When I'm not coding, you'll find me [hiking/traveling/playing chess/whatever hobbies]. I'm always exploring new technologies and looking for interesting problems to solve.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Contact Section */}
