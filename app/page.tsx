@@ -149,6 +149,72 @@ export default function Home() {
           <span className="text-white">experience</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
+
+        <div className="max-w-4xl mx-auto space-y-8">
+          {/* Job 1: P.L. Marketing */}
+          <div className="bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
+            {/* Header: Company and Duration */}
+            <div className="flex justify-between items-baseline mb-2">
+              <h3 className="text-2xl font-bold text-white">P.L. Marketing</h3>
+              <span className="text-gray-400 text-sm">Oct 2024 - Present</span>
+            </div>
+
+            {/* Position */}
+            <h4 className="text-xl font-semibold text-purple-400 mb-4">Space Technology Analyst</h4>
+
+            {/* Bullet Points */}
+            <ul className="space-y-3 text-gray-300 leading-relaxed">
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Led development of machine learning pipeline processing 10M+ daily events</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Architected microservices infrastructure reducing deployment time by 60%</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Mentored team of 4 junior developers in best practices and code review</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Implemented automated testing framework improving code coverage to 95%</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Job 2: Innovate Solutions LLC */}
+          <div className="bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
+            {/* Header: Company and Duration */}
+            <div className="flex justify-between items-baseline mb-2">
+              <h3 className="text-2xl font-bold text-white">Innovate Solutions LLC</h3>
+              <span className="text-gray-400 text-sm">Jun 2021 - Dec 2022</span>
+            </div>
+
+            {/* Position */}
+            <h4 className="text-xl font-semibold text-purple-400 mb-4">Full Stack Developer</h4>
+
+            {/* Bullet Points */}
+            <ul className="space-y-3 text-gray-300 leading-relaxed">
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Built responsive web applications using React, Node.js, and PostgreSQL</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Collaborated with design team to implement pixel-perfect UI components</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Optimized database queries reducing average response time by 40%</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Developed RESTful APIs serving 50K+ monthly active users</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </section>
 
       {/* Skills Section */}
