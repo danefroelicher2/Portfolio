@@ -476,7 +476,7 @@ export default function Home() {
                   Chess Engine
                 </h3>
                 <p className="text-gray-400 leading-relaxed text-lg">
-                  Placeholder description for Chess Engine project
+                  C++ chess engine combining classical hand-coded evaluation with neural network inference. Trained a PyTorch model on 100K+ master-level games, converted to ONNX, and integrated into production C++ engine deployed on Render. Users can toggle between classical and ML evaluation modes via clean interface.
                 </p>
               </div>
             </div>
