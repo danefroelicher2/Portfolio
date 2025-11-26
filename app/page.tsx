@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useState } from 'react';
 import {
   SiJavascript,
   SiTypescript,
@@ -29,6 +30,97 @@ import {
 import { BiData } from 'react-icons/bi';
 
 export default function Home() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: 'success' | 'error' | null;
+    message: string;
+  }>({ type: null, message: '' });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Client-side validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'All fields are required.',
+      });
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Please enter a valid email address.',
+      });
+      return;
+    }
+
+    // Message length validation
+    if (formData.message.length < 10) {
+      setSubmitStatus({
+        type: 'error',
+        message: 'Message must be at least 10 characters long.',
+      });
+      return;
+    }
+
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: '' });
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: 'success',
+          message: "Message sent successfully! I'll get back to you soon.",
+        });
+        setFormData({ name: '', email: '', message: '' });
+
+        // Auto-dismiss success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus({ type: null, message: '' });
+        }, 5000);
+      } else {
+        const data = await response.json();
+        setSubmitStatus({
+          type: 'error',
+          message:
+            data.error ||
+            'Failed to send message. Please try again or email me directly.',
+        });
+      }
+    } catch (error) {
+      setSubmitStatus({
+        type: 'error',
+        message:
+          'Failed to send message. Please try again or email me directly.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   return (
     <div className="min-h-screen">
       {/* Fixed Header */}
@@ -167,24 +259,28 @@ export default function Home() {
             <ul className="space-y-3 text-gray-300 leading-relaxed">
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Led development of machine learning pipeline processing 10M+ daily events</span>
+                <span>Develop custom JavaScript commodity-specific algorithms that generate optimized planograms for multiple product commodities across the Kroger enterprise.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Architected microservices infrastructure reducing deployment time by 60%</span>
+                <span>Engineer mathematical optimization logic to automate tasks previously done manually, drastically reducing execution time and increasing accuracy.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Mentored team of 4 junior developers in best practices and code review</span>
+                <span>Design and implement math-driven decision trees to handle complex product positioning, fixture constraints, adjacency logic, and spatial rules.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Implemented automated testing framework improving code coverage to 95%</span>
+                <span>Collaborate cross-functionally with category managers to clarify requirements, validate rule sets, and align on automation outputs.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Learn and apply the manual merchandising steps and category workflows to ensure automation aligns with real-world processes.</span>
               </li>
             </ul>
           </div>
 
-          {/* Job 2: Innovate Solutions LLC */}
+          {/* Job 2: Siemens */}
           <div className="bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
             {/* Header: Company and Duration */}
             <div className="flex justify-between items-baseline mb-2">
@@ -199,19 +295,19 @@ export default function Home() {
             <ul className="space-y-3 text-gray-300 leading-relaxed">
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Built responsive web applications using React, Node.js, and PostgreSQL</span>
+                <span>Led and managed multiple cross-functional data projects, serving as the central point of contact for data collection, processing, and visualization for leadership.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Collaborated with design team to implement pixel-perfect UI components</span>
+                <span>Directed Siemens’ supplier carbon-neutrality initiative, hosting informational meetings with 100+ attendees and coordinating bi-weekly progress check-ins. Built Tableau dashboards and executive presentations to track sustainability progress. </span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Optimized database queries reducing average response time by 40%</span>
+                <span>Served as the primary contact for supplier account updates, including new account creation, reactivations, banking changes, and user information corrections. Produced quarterly analytic reports summarizing changes for leadership.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Developed RESTful APIs serving 50K+ monthly active users</span>
+                <span>Managed system/tool access rights for Siemens users across North America, reviewing, approving, and documenting access requests for internal platforms.</span>
               </li>
             </ul>
           </div>
@@ -515,6 +611,88 @@ export default function Home() {
           <span className="text-white">contact</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
+
+        <div className="max-w-2xl mx-auto">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* Name Field */}
+            <div>
+              <label
+                htmlFor="name"
+                className="block text-gray-300 font-medium mb-2"
+              >
+                name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            {/* Email Field */}
+            <div>
+              <label
+                htmlFor="email"
+                className="block text-gray-300 font-medium mb-2"
+              >
+                email
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                required
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all"
+              />
+            </div>
+
+            {/* Message Field */}
+            <div>
+              <label
+                htmlFor="message"
+                className="block text-gray-300 font-medium mb-2"
+              >
+                message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                value={formData.message}
+                onChange={handleInputChange}
+                required
+                rows={6}
+                className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all resize-vertical"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full px-6 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 disabled:bg-purple-400 disabled:cursor-not-allowed transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              {isSubmitting ? 'Sending...' : 'Send Message'}
+            </button>
+
+            {/* Success/Error Messages */}
+            {submitStatus.type && (
+              <div
+                className={`p-4 rounded-lg ${submitStatus.type === 'success'
+                  ? 'bg-green-900/30 border border-green-500 text-green-300'
+                  : 'bg-red-900/30 border border-red-500 text-red-300'
+                  }`}
+              >
+                {submitStatus.message}
+              </div>
+            )}
+          </form>
+        </div>
       </section>
     </div>
   );
