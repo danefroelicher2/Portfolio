@@ -48,10 +48,10 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="#experience"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  #projects
+                  #experience
                 </a>
               </li>
               <li>
@@ -60,6 +60,14 @@ export default function Home() {
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
                   #skills
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                >
+                  #projects
                 </a>
               </li>
               <li>
@@ -110,9 +118,9 @@ export default function Home() {
 
         {/* Bouncing Arrow - Bottom Center */}
         <a
-          href="#projects"
+          href="#experience"
           className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-purple-500 hover:text-purple-400 transition-colors cursor-pointer"
-          aria-label="Scroll to projects"
+          aria-label="Scroll to experience"
         >
           <svg
             className="w-12 h-12 animate-bounce"
@@ -129,6 +137,143 @@ export default function Home() {
             />
           </svg>
         </a>
+      </section>
+
+      {/* Experience Section */}
+      <section
+        id="experience"
+        className="bg-gray-900 py-20 px-8"
+      >
+        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
+          <span className="text-purple-500">#</span>
+          <span className="text-white">experience</span>
+          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
+        </h2>
+      </section>
+
+      {/* Skills Section */}
+      <section
+        id="skills"
+        className="bg-gray-900 py-20 px-8"
+      >
+        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
+          <span className="text-purple-500">#</span>
+          <span className="text-white">skills</span>
+          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
+        </h2>
+
+        <div className="max-w-7xl mx-auto space-y-6">
+          {/* LANGUAGES */}
+          <div className="flex items-start gap-8">
+            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">LANGUAGES</h3>
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+              {[
+                { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
+                { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
+                { icon: SiPython, name: 'Python', color: '#3776AB' },
+                { icon: SiCplusplus, name: 'C++', color: '#00599C' },
+                { icon: SiRust, name: 'Rust', color: '#CE422B' },
+                { icon: BiData, name: 'SQL', color: '#CC2927' },
+                { icon: SiHtml5, name: 'HTML', color: '#E34F26' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* FRAMEWORKS / RUNTIMES */}
+          <div className="flex items-start gap-8">
+            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">FRAMEWORKS / RUNTIMES</h3>
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { icon: SiReact, name: 'React', color: '#61DAFB' },
+                { icon: SiNextdotjs, name: 'Next.js', color: '#FFFFFF' },
+                { icon: SiReact, name: 'React Native', color: '#61DAFB' },
+                { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
+                { icon: SiExpo, name: 'Expo', color: '#000020' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* MACHINE LEARNING */}
+          <div className="flex items-start gap-8">
+            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">MACHINE LEARNING</h3>
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+              {[
+                { icon: SiPytorch, name: 'PyTorch', color: '#EE4C2C' },
+                { icon: SiNumpy, name: 'NumPy', color: '#013243' },
+                { icon: SiPandas, name: 'Pandas', color: '#150458' },
+                { icon: SiOnnx, name: 'ONNX', color: '#005CED' },
+                { icon: BiData, name: 'Ollama', color: '#FFFFFF' },
+                { icon: BiData, name: 'Whisper', color: '#10A37F' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* DATABASES / BACKEND SERVICES */}
+          <div className="flex items-start gap-8">
+            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">DATABASES / BACKEND SERVICES</h3>
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
+              {[
+                { icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
+                { icon: SiSqlite, name: 'SQLite', color: '#003B57' },
+                { icon: SiSupabase, name: 'Supabase', color: '#3ECF8E' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* CLOUD & DEVOPS */}
+          <div className="flex items-start gap-8">
+            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">CLOUD & DEVOPS</h3>
+            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { icon: SiVercel, name: 'Vercel', color: '#FFFFFF' },
+                { icon: SiRender, name: 'Render', color: '#46E3B7' },
+                { icon: SiDocker, name: 'Docker', color: '#2496ED' },
+                { icon: SiLinux, name: 'Linux', color: '#FCC624' },
+                { icon: SiGit, name: 'Git', color: '#F05032' },
+              ].map((skill) => (
+                <div
+                  key={skill.name}
+                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                >
+                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* Projects Section */}
@@ -215,131 +360,6 @@ export default function Home() {
             >
               Learn More
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section
-        id="skills"
-        className="bg-gray-900 py-20 px-8"
-      >
-        <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
-          <span className="text-purple-500">#</span>
-          <span className="text-white">skills</span>
-          <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
-        </h2>
-
-        <div className="max-w-7xl mx-auto space-y-6">
-          {/* LANGUAGES */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">LANGUAGES</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
-              {[
-                { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
-                { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
-                { icon: SiPython, name: 'Python', color: '#3776AB' },
-                { icon: SiCplusplus, name: 'C++', color: '#00599C' },
-                { icon: SiRust, name: 'Rust', color: '#CE422B' },
-                { icon: BiData, name: 'SQL', color: '#CC2927' },
-                { icon: SiHtml5, name: 'HTML', color: '#E34F26' },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
-                >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* FRAMEWORKS / RUNTIMES */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">FRAMEWORKS / RUNTIMES</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {[
-                { icon: SiReact, name: 'React', color: '#61DAFB' },
-                { icon: SiNextdotjs, name: 'Next.js', color: '#FFFFFF' },
-                { icon: SiReact, name: 'React Native', color: '#61DAFB' },
-                { icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
-                { icon: SiExpo, name: 'Expo', color: '#000020' },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
-                >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* MACHINE LEARNING */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">MACHINE LEARNING</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-              {[
-                { icon: SiPytorch, name: 'PyTorch', color: '#EE4C2C' },
-                { icon: SiNumpy, name: 'NumPy', color: '#013243' },
-                { icon: SiPandas, name: 'Pandas', color: '#150458' },
-                { icon: SiOnnx, name: 'ONNX', color: '#005CED' },
-                { icon: BiData, name: 'Ollama', color: '#FFFFFF' },
-                { icon: BiData, name: 'Whisper', color: '#10A37F' },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
-                >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* DATABASES & BACKEND SERVICES */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">DATABASES & BACKEND SERVICES</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[
-                { icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
-                { icon: SiSqlite, name: 'SQLite', color: '#003B57' },
-                { icon: SiSupabase, name: 'Supabase', color: '#3ECF8E' },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
-                >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* CLOUD & DEVOPS */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">CLOUD & DEVOPS</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {[
-                { icon: SiVercel, name: 'Vercel', color: '#FFFFFF' },
-                { icon: SiRender, name: 'Render', color: '#46E3B7' },
-                { icon: SiDocker, name: 'Docker', color: '#2496ED' },
-                { icon: SiLinux, name: 'Linux', color: '#FCC624' },
-                { icon: SiGit, name: 'Git', color: '#F05032' },
-              ].map((skill) => (
-                <div
-                  key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
-                >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
