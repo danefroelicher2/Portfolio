@@ -462,11 +462,12 @@ export default function Home() {
                 className="block h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 group overflow-hidden"
               >
                 <Image
-                  src="/images/chess.png"
+                  src="/images/chess.png?v=2"
                   alt="Chess Engine"
                   fill
                   className="object-cover object-[center_bottom]"
                   sizes="540px"
+                  unoptimized
                 />
               </a>
 
@@ -513,8 +514,7 @@ export default function Home() {
                   Conversationalist AI
                 </h3>
                 <p className="text-gray-400 leading-relaxed text-lg">
-                  Placeholder description for Conversationalist AI project
-                </p>
+                  Voice-driven conversationalist AI with real-time speech processing pipeline. Integrated OpenAI Whisper for transcription, local Llama 3.1 LLM (0.18-0.58s response times via Ollama), and PostgreSQL for persistent memory. Features voice authentication, bcrypt security, and context-aware dialogue using PyAudio/pyttsx3.                </p>
               </div>
             </div>
 
