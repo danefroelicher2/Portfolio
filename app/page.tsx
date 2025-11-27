@@ -498,14 +498,18 @@ export default function Home() {
             <div className="w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
               {/* Clickable Image Area */}
               <a
-                href="https://github.com/danefroelicher2/conversationalist-ai"
+                href="https://github.com/danefroelicher2/Conversationalist"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block h-80 bg-gray-700 flex items-center justify-center hover:bg-gray-600 transition-colors duration-300 group"
+                className="block h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 group overflow-hidden"
               >
-                <span className="text-gray-400 group-hover:text-gray-300 transition-colors text-lg">
-                  Image Placeholder
-                </span>
+                <Image
+                  src="/images/ai.png"
+                  alt="Conversationalist AI"
+                  fill
+                  className="object-cover object-[center_bottom]"
+                  sizes="540px"
+                />
               </a>
 
               {/* Non-clickable Content Area */}
@@ -520,7 +524,7 @@ export default function Home() {
 
             {/* Learn More Button */}
             <a
-              href="https://google.com"
+              href="https://github.com/danefroelicher2/Conversationalist"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
