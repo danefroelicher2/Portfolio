@@ -26,6 +26,10 @@ import {
   SiGit,
   SiExpo,
   SiOnnx,
+  SiGithub,
+  SiLinkedin,
+  SiInstagram,
+  SiGoodreads,
 } from 'react-icons/si';
 import { BiData } from 'react-icons/bi';
 
@@ -597,8 +601,7 @@ export default function Home() {
                   <span>✨</span> Beyond Code
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  When I'm not coding, you'll find me [hiking/traveling/playing chess/whatever hobbies]. I'm always exploring new technologies and looking for interesting problems to solve.
-                </p>
+                  When I'm not coding, you'll find me working out, playing chess, reading, and watching One Piece. I'm ambitious and driven, focused on building technology that creates meaningful impact.                </p>
               </div>
             </div>
           </div>
@@ -696,6 +699,51 @@ export default function Home() {
               </div>
             )}
           </form>
+
+          {/* Social Media Links */}
+          <div className="mt-16 text-center">
+            <p className="text-gray-400 text-sm uppercase tracking-wider mb-6">
+              Connect with me
+            </p>
+            <div className="flex justify-center items-center gap-8">
+              <a
+                href="https://github.com/danefroelicher2"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-purple-500 hover:scale-110 transition-all duration-300"
+                aria-label="GitHub"
+              >
+                <SiGithub className="text-3xl" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/dane-froelicher-5502a5200/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-purple-500 hover:scale-110 transition-all duration-300"
+                aria-label="LinkedIn"
+              >
+                <SiLinkedin className="text-3xl" />
+              </a>
+              <a
+                href="https://www.instagram.com/danefroelicher/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-purple-500 hover:scale-110 transition-all duration-300"
+                aria-label="Instagram"
+              >
+                <SiInstagram className="text-3xl" />
+              </a>
+              <a
+                href="https://www.goodreads.com/user/show/184708903-dane-froelicher"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-purple-500 hover:scale-110 transition-all duration-300"
+                aria-label="Goodreads"
+              >
+                <SiGoodreads className="text-3xl" />
+              </a>
+            </div>
+          </div>
         </div>
       </section>
     </div>
