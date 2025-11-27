@@ -567,7 +567,7 @@ export default function Home() {
               {/* Section 1: Intro */}
               <div>
                 <p className="text-xl text-gray-200 leading-relaxed font-light">
-                  I'm a software developer passionate about building intelligent systems that solve real problems. I specialize in automation, machine learning, and full-stack development—turning complex challenges into elegant solutions.
+                  I'm a software developer passionate about building intelligent systems that solve real problems. I have experience in automation, machine learning, full-stack development, and data analytics.
                 </p>
               </div>
 
@@ -577,7 +577,7 @@ export default function Home() {
                   <span>📚</span> Background
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  I studied [Computer Science/relevant field] at [University Name], where I developed a deep interest in artificial intelligence and software architecture. My journey has taken me from building chess engines with reinforcement learning to creating conversational AI systems.
+                  I studied Computer Information Systems and Finance at the University of Louisville, where I developed a deep interest in autonomous systems, artificial intelligence, and software architecture.
                 </p>
               </div>
 
@@ -587,7 +587,7 @@ export default function Home() {
                   <span>💻</span> What I Build
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  I focus on projects at the intersection of AI and practical application—whether that's developing machine learning pipelines, crafting responsive web applications, or exploring new ways to make technology more intuitive and accessible.
+                  I'm driven by projects that grow beyond their creation—scalable, repeatable, and built for long-term improvement. The question for me is no longer <em>why</em> I can create, but <em>what</em> I can create next.
                 </p>
               </div>
 
