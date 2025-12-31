@@ -211,6 +211,24 @@ export default function Home() {
             <br />
             Chess engines. Conversational AI. Automated workflows.
           </p>
+
+          {/* CTA Buttons */}
+          <div className="flex gap-6 mt-12">
+            <a
+              href="/Dane_Froelicher_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              View Resume
+            </a>
+            <a
+              href="#contact"
+              className="px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
+            >
+              Get In Touch
+            </a>
+          </div>
         </div>
 
         {/* Bouncing Arrow - Bottom Center */}
