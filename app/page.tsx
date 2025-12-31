@@ -196,20 +196,23 @@ export default function Home() {
         {/* Main Content - Positioned in Upper-Center */}
         <div className="flex flex-col items-center text-center px-8 -translate-y-12">
           {/* Main Heading */}
-          <h1 className="text-7xl font-bold text-white mb-6">
-            Dane Froelicher
+          <h1 className="text-7xl font-bold text-white mb-3">
+            Welcome, I'm Dane Froelicher.
           </h1>
 
           {/* Subheading */}
-          <h2 className="text-3xl font-semibold text-purple-400 mb-12">
-            Developer. Automator. ML Engineer.
+          <h2 className="text-6xl font-semibold text-purple-400 mb-12">
+            Developer & Automator.
           </h2>
 
           {/* Body Text */}
           <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl">
-            I build intelligent systems that solve real problems.
+
+            I'm a software developer passionate about building intelligent systems
             <br />
-            Chess engines. Conversational AI. Automated workflows.
+            that solve real problems. I have experience in machine learning,
+            <br />
+            automation, full-stack development, and data analytics.
           </p>
 
           {/* CTA Buttons */}
@@ -477,14 +480,14 @@ export default function Home() {
         <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
           {/* Project 1: Chess Engine */}
           <div className="flex flex-col items-center">
-            <div className="w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
-              {/* Clickable Image Area */}
-              <a
-                href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 group overflow-hidden"
-              >
+            <a
+              href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+            >
+              {/* Image Area */}
+              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
                 <Image
                   src="/images/chess.png?v=2"
                   alt="Chess Engine"
@@ -493,9 +496,9 @@ export default function Home() {
                   sizes="540px"
                   unoptimized
                 />
-              </a>
+              </div>
 
-              {/* Non-clickable Content Area */}
+              {/* Content Area */}
               <div className="p-8 bg-gray-800">
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Chess Engine
@@ -504,11 +507,11 @@ export default function Home() {
                   C++ chess engine combining classical hand-coded evaluation with neural network inference. Trained a PyTorch model on 100K+ master-level games, converted to ONNX, and integrated into production C++ engine deployed on Render. Users can toggle between classical and ML evaluation modes via clean interface.
                 </p>
               </div>
-            </div>
+            </a>
 
             {/* Learn More Button */}
             <a
-              href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
+              href="https://danefroelicher2.github.io/NewBlog/tech.html"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
@@ -519,14 +522,14 @@ export default function Home() {
 
           {/* Project 2: Conversationalist AI */}
           <div className="flex flex-col items-center">
-            <div className="w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300">
-              {/* Clickable Image Area */}
-              <a
-                href="https://github.com/danefroelicher2/Conversationalist"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 group overflow-hidden"
-              >
+            <a
+              href="https://danefroelicher2.github.io/NewBlog/tech.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+            >
+              {/* Image Area */}
+              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
                 <Image
                   src="/images/ai.png"
                   alt="Conversationalist AI"
@@ -534,9 +537,9 @@ export default function Home() {
                   className="object-cover object-[center_bottom]"
                   sizes="540px"
                 />
-              </a>
+              </div>
 
-              {/* Non-clickable Content Area */}
+              {/* Content Area */}
               <div className="p-8 bg-gray-800">
                 <h3 className="text-3xl font-bold text-white mb-4">
                   Conversationalist AI
@@ -544,11 +547,11 @@ export default function Home() {
                 <p className="text-gray-400 leading-relaxed text-lg">
                   Voice-driven conversationalist AI with real-time speech processing pipeline. Integrated OpenAI Whisper for transcription, local Llama 3.1 LLM (0.18-0.58s response times via Ollama), and PostgreSQL for persistent memory. Features voice authentication, bcrypt security, and context-aware dialogue using PyAudio/pyttsx3.                </p>
               </div>
-            </div>
+            </a>
 
             {/* Learn More Button */}
             <a
-              href="https://github.com/danefroelicher2/Conversationalist"
+              href="https://danefroelicher2.github.io/NewBlog/tech.html"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
