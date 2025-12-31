@@ -223,10 +223,12 @@ export default function Home() {
               View Resume
             </a>
             <a
-              href="#contact"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
             >
-              Get In Touch
+              View Blog
             </a>
           </div>
         </div>
