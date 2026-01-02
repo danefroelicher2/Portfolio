@@ -624,7 +624,7 @@ export default function Home() {
                   <span>✨</span> Beyond Code
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
-                  When I'm not coding, you'll find me working out, playing chess, reading, and watching One Piece. I'm ambitious and driven, focused on building technology that creates meaningful impact.                </p>
+                  When I'm not coding, you'll find me working out, playing chess, reading, and watching One Piece.              </p>
               </div>
             </div>
           </div>
