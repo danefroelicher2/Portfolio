@@ -286,7 +286,7 @@ export default function Home() {
             <ul className="space-y-3 text-gray-300 leading-relaxed">
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
-                <span>Develop custom JavaScript commodity-specific algorithms that generate optimized planograms for multiple product commodities across the Kroger enterprise.</span>
+                <span>Develop commodity-specific algorithms utilizing JavaScript and Rust to generate optimized planograms across the Kroger enterprise.</span>
               </li>
               <li className="flex gap-3">
                 <span className="text-purple-500 mt-1.5">•</span>
@@ -511,7 +511,7 @@ export default function Home() {
 
             {/* Learn More Button */}
             <a
-              href="https://danefroelicher2.github.io/NewBlog/tech.html"
+              href="https://danefroelicher2.github.io/NewBlog/discourse.html#chess-engine-ml"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
@@ -523,7 +523,7 @@ export default function Home() {
           {/* Project 2: Conversationalist AI */}
           <div className="flex flex-col items-center">
             <a
-              href="https://danefroelicher2.github.io/NewBlog/tech.html"
+              href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
@@ -551,7 +551,7 @@ export default function Home() {
 
             {/* Learn More Button */}
             <a
-              href="https://danefroelicher2.github.io/NewBlog/tech.html"
+              href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
