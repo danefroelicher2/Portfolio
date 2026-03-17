@@ -1,6 +1,8 @@
 'use client';
 
 import Image from 'next/image';
+import { SplineScene } from '@/components/ui/spline-scene';
+import { Spotlight } from '@/components/ui/spotlight';
 import { useState } from 'react';
 import {
   SiJavascript,
@@ -145,10 +147,10 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#experience"
+                  href="#projects"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  #experience
+                  #projects
                 </a>
               </li>
               <li>
@@ -161,10 +163,10 @@ export default function Home() {
               </li>
               <li>
                 <a
-                  href="#projects"
+                  href="#experience"
                   className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
                 >
-                  #projects
+                  #experience
                 </a>
               </li>
               <li>
@@ -188,59 +190,71 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero/Home Section */}
+      {/* Hero Section - Split Screen with 3D */}
       <section
         id="home"
-        className="min-h-screen pt-20 bg-gradient-to-br from-gray-900 to-gray-800 relative flex items-center justify-center"
+        className="relative min-h-screen bg-black overflow-hidden"
       >
-        {/* Main Content - Positioned in Upper-Center */}
-        <div className="flex flex-col items-center text-center px-8 -translate-y-12">
-          {/* Main Heading */}
-          <h1 className="text-7xl font-bold text-white mb-3">
-            Welcome, I'm Dane Froelicher.
-          </h1>
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="purple"
+        />
 
-          {/* Subheading */}
-          <h2 className="text-6xl font-semibold text-purple-400 mb-12">
-            Developer & Automator.
-          </h2>
+        <div className="container mx-auto px-6 h-screen flex flex-col lg:flex-row items-center pt-20">
+          {/* LEFT SIDE - Text Content */}
+          <div className="flex-1 lg:pr-12 relative z-10 flex flex-col justify-center">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+              <span className="text-white">Welcome, I&apos;m </span>
+              <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+                Dane Froelicher
+              </span>
+            </h1>
 
-          {/* Body Text */}
-          <p className="text-2xl text-gray-300 leading-relaxed max-w-3xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
+              Developer &amp; Automator
+            </h2>
 
-            I'm a software developer passionate about building intelligent systems
-            <br />
-            that solve real problems. I have experience in machine learning,
-            <br />
-            automation, full-stack development, and data analytics.
-          </p>
+            <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl">
+              I&apos;m a software developer passionate about building intelligent systems
+              that solve real problems. I have experience in machine learning,
+              automation, full-stack development, and data analytics.
+            </p>
 
-          {/* CTA Buttons */}
-          <div className="flex gap-6 mt-12">
-            <a
-              href="/Dane_Froelicher_Resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              View Resume
-            </a>
-            <a
-              href="https://danefroelicher2.github.io/NewBlog/index.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
-            >
-              View Blog
-            </a>
+            {/* CTA Buttons — UNCHANGED */}
+            <div className="flex gap-6">
+              <a
+                href="/Dane_Froelicher_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+              >
+                View Resume
+              </a>
+              <a
+                href="https://danefroelicher2.github.io/NewBlog/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
+              >
+                View Blog
+              </a>
+            </div>
+          </div>
+
+          {/* RIGHT SIDE - 3D Interactive */}
+          <div className="flex-1 relative h-[500px] lg:h-[700px] xl:h-[800px] w-full scale-110 lg:scale-125">
+            <SplineScene
+              scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
+              className="w-full h-full"
+            />
           </div>
         </div>
 
         {/* Bouncing Arrow - Bottom Center */}
         <a
-          href="#experience"
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-purple-500 hover:text-purple-400 transition-colors cursor-pointer"
-          aria-label="Scroll to experience"
+          href="#projects"
+          className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 text-purple-500 hover:text-purple-400 transition-colors cursor-pointer"
+          aria-label="Scroll to projects"
         >
           <svg
             className="w-12 h-12 animate-bounce"
@@ -259,84 +273,98 @@ export default function Home() {
         </a>
       </section>
 
-      {/* Experience Section */}
+      {/* Projects Section */}
       <section
-        id="experience"
+        id="projects"
         className="bg-gray-900 py-20 px-8"
       >
         <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
-          <span className="text-white">experience</span>
+          <span className="text-white">projects</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
-        <div className="max-w-4xl mx-auto space-y-8">
-          {/* Job 1: P.L. Marketing */}
-          <div className="bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
-            {/* Header: Company and Duration */}
-            <div className="flex justify-between items-baseline mb-2">
-              <h3 className="text-2xl font-bold text-white">P.L. Marketing</h3>
-              <span className="text-gray-400 text-sm">Oct 2024 - Present</span>
-            </div>
+        <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
+          {/* Project 1: Chess Engine */}
+          <div className="flex flex-col items-center">
+            <a
+              href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+            >
+              {/* Image Area */}
+              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
+                <Image
+                  src="/images/chess.png?v=2"
+                  alt="Chess Engine"
+                  fill
+                  className="object-cover object-[center_bottom]"
+                  sizes="540px"
+                  unoptimized
+                />
+              </div>
 
-            {/* Position */}
-            <h4 className="text-xl font-semibold text-purple-400 mb-4">Space Technology Analyst</h4>
+              {/* Content Area */}
+              <div className="p-8 bg-gray-800">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Chess Engine
+                </h3>
+                <p className="text-gray-400 leading-relaxed text-lg">
+                  C++ chess engine combining classical hand-coded evaluation with neural network inference. Trained a PyTorch model on 100K+ master-level games, converted to ONNX, and integrated into production C++ engine deployed on Render. Users can toggle between classical and ML evaluation modes via clean interface.
+                </p>
+              </div>
+            </a>
 
-            {/* Bullet Points */}
-            <ul className="space-y-3 text-gray-300 leading-relaxed">
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Develop commodity-specific algorithms utilizing JavaScript and Rust to generate optimized planograms across the Kroger enterprise.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Engineer mathematical optimization logic to automate tasks previously done manually, drastically reducing execution time and increasing accuracy.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Design and implement math-driven decision trees to handle complex product positioning, fixture constraints, adjacency logic, and spatial rules.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Collaborate cross-functionally with category managers to clarify requirements, validate rule sets, and align on automation outputs.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Learn and apply the manual merchandising steps and category workflows to ensure automation aligns with real-world processes.</span>
-              </li>
-            </ul>
+            {/* Learn More Button */}
+            <a
+              href="https://danefroelicher2.github.io/NewBlog/discourse.html#chess-engine-ml"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
+            >
+              Learn More
+            </a>
           </div>
 
-          {/* Job 2: Siemens */}
-          <div className="bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
-            {/* Header: Company and Duration */}
-            <div className="flex justify-between items-baseline mb-2">
-              <h3 className="text-2xl font-bold text-white">Siemens</h3>
-              <span className="text-gray-400 text-sm">Dec 2022 - May 2024</span>
-            </div>
+          {/* Project 2: Conversationalist AI */}
+          <div className="flex flex-col items-center">
+            <a
+              href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+            >
+              {/* Image Area */}
+              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
+                <Image
+                  src="/images/ai.png"
+                  alt="Conversationalist AI"
+                  fill
+                  className="object-cover object-[center_bottom]"
+                  sizes="540px"
+                />
+              </div>
 
-            {/* Position */}
-            <h4 className="text-xl font-semibold text-purple-400 mb-4">Data Analytics Internship</h4>
+              {/* Content Area */}
+              <div className="p-8 bg-gray-800">
+                <h3 className="text-3xl font-bold text-white mb-4">
+                  Conversationalist AI
+                </h3>
+                <p className="text-gray-400 leading-relaxed text-lg">
+                  Voice-driven conversationalist AI with real-time speech processing pipeline. Integrated OpenAI Whisper for transcription, local Llama 3.1 LLM (0.18-0.58s response times via Ollama), and PostgreSQL for persistent memory. Features voice authentication, bcrypt security, and context-aware dialogue using PyAudio/pyttsx3.                </p>
+              </div>
+            </a>
 
-            {/* Bullet Points */}
-            <ul className="space-y-3 text-gray-300 leading-relaxed">
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Led and managed multiple cross-functional data projects, serving as the central point of contact for data collection, processing, and visualization for leadership.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Directed Siemens’ supplier carbon-neutrality initiative, hosting informational meetings with 100+ attendees and coordinating bi-weekly progress check-ins. Built Tableau dashboards and executive presentations to track sustainability progress. </span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Served as the primary contact for supplier account updates, including new account creation, reactivations, banking changes, and user information corrections. Produced quarterly analytic reports summarizing changes for leadership.</span>
-              </li>
-              <li className="flex gap-3">
-                <span className="text-purple-500 mt-1.5">•</span>
-                <span>Managed system/tool access rights for Siemens users across North America, reviewing, approving, and documenting access requests for internal platforms.</span>
-              </li>
-            </ul>
+            {/* Learn More Button */}
+            <a
+              href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
+            >
+              Learn More
+            </a>
           </div>
         </div>
       </section>
@@ -466,98 +494,84 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects Section */}
+      {/* Experience Section */}
       <section
-        id="projects"
+        id="experience"
         className="bg-gray-900 py-20 px-8"
       >
         <h2 className="text-3xl font-mono flex items-center gap-3 mb-16">
           <span className="text-purple-500">#</span>
-          <span className="text-white">projects</span>
+          <span className="text-white">experience</span>
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
-          {/* Project 1: Chess Engine */}
-          <div className="flex flex-col items-center">
-            <a
-              href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
-            >
-              {/* Image Area */}
-              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
-                <Image
-                  src="/images/chess.png?v=2"
-                  alt="Chess Engine"
-                  fill
-                  className="object-cover object-[center_bottom]"
-                  sizes="540px"
-                  unoptimized
-                />
-              </div>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+          {/* Job 1: P.L. Marketing */}
+          <div className="h-full bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
+            {/* Header: Company and Duration */}
+            <div className="flex justify-between items-baseline mb-2">
+              <h3 className="text-2xl font-bold text-white">P.L. Marketing</h3>
+              <span className="text-gray-400 text-sm">Oct 2024 - Present</span>
+            </div>
 
-              {/* Content Area */}
-              <div className="p-8 bg-gray-800">
-                <h3 className="text-3xl font-bold text-white mb-4">
-                  Chess Engine
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  C++ chess engine combining classical hand-coded evaluation with neural network inference. Trained a PyTorch model on 100K+ master-level games, converted to ONNX, and integrated into production C++ engine deployed on Render. Users can toggle between classical and ML evaluation modes via clean interface.
-                </p>
-              </div>
-            </a>
+            {/* Position */}
+            <h4 className="text-xl font-semibold text-purple-400 mb-4">Space Technology Analyst</h4>
 
-            {/* Learn More Button */}
-            <a
-              href="https://danefroelicher2.github.io/NewBlog/discourse.html#chess-engine-ml"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
-            >
-              Learn More
-            </a>
+            {/* Bullet Points */}
+            <ul className="space-y-5 text-gray-300 text-lg leading-relaxed">
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Develop commodity-specific algorithms utilizing JavaScript and Rust to generate optimized planograms across the Kroger enterprise.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Engineer mathematical optimization logic to automate tasks previously done manually, drastically reducing execution time and increasing accuracy.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Design and implement math-driven decision trees to handle complex product positioning, fixture constraints, adjacency logic, and spatial rules.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Collaborate cross-functionally with category managers to clarify requirements, validate rule sets, and align on automation outputs.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Learn and apply the manual merchandising steps and category workflows to ensure automation aligns with real-world processes.</span>
+              </li>
+            </ul>
           </div>
 
-          {/* Project 2: Conversationalist AI */}
-          <div className="flex flex-col items-center">
-            <a
-              href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
-            >
-              {/* Image Area */}
-              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
-                <Image
-                  src="/images/ai.png"
-                  alt="Conversationalist AI"
-                  fill
-                  className="object-cover object-[center_bottom]"
-                  sizes="540px"
-                />
-              </div>
+          {/* Job 2: Siemens */}
+          <div className="h-full bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
+            {/* Header: Company and Duration */}
+            <div className="flex justify-between items-baseline mb-2">
+              <h3 className="text-2xl font-bold text-white">Siemens</h3>
+              <span className="text-gray-400 text-sm">Dec 2022 - May 2024</span>
+            </div>
 
-              {/* Content Area */}
-              <div className="p-8 bg-gray-800">
-                <h3 className="text-3xl font-bold text-white mb-4">
-                  Conversationalist AI
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  Voice-driven conversationalist AI with real-time speech processing pipeline. Integrated OpenAI Whisper for transcription, local Llama 3.1 LLM (0.18-0.58s response times via Ollama), and PostgreSQL for persistent memory. Features voice authentication, bcrypt security, and context-aware dialogue using PyAudio/pyttsx3.                </p>
-              </div>
-            </a>
+            {/* Position */}
+            <h4 className="text-xl font-semibold text-purple-400 mb-4">Data Analytics Internship</h4>
 
-            {/* Learn More Button */}
-            <a
-              href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
-            >
-              Learn More
-            </a>
+            {/* Bullet Points */}
+            <ul className="space-y-3 text-gray-300 leading-relaxed">
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Led and managed multiple cross-functional data projects, serving as the central point of contact for data collection, processing, and visualization for leadership.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Directed Siemens' supplier carbon-neutrality initiative, hosting informational meetings with 100+ attendees and coordinating bi-weekly progress check-ins. Built Tableau dashboards and executive presentations to track sustainability progress. </span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Served as the primary contact for supplier account updates, including new account creation, reactivations, banking changes, and user information corrections. Produced quarterly analytic reports summarizing changes for leadership.</span>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-purple-500 mt-1.5">•</span>
+                <span>Managed system/tool access rights for Siemens users across North America, reviewing, approving, and documenting access requests for internal platforms.</span>
+              </li>
+            </ul>
           </div>
         </div>
       </section>
