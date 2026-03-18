@@ -200,7 +200,7 @@ export default function Home() {
           fill="purple"
         />
 
-        <div className="container mx-auto px-4 sm:px-6 min-h-screen pt-20 pb-8 lg:py-0 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
+        <div className="container mx-auto px-4 sm:px-6 min-h-screen pt-32 sm:pt-28 lg:pt-20 pb-8 lg:py-0 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
           {/* LEFT SIDE - Text Content */}
           <div className="flex-1 lg:pr-12 relative z-10 flex flex-col justify-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
@@ -385,7 +385,7 @@ export default function Home() {
           {/* LANGUAGES */}
           <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
             <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">LANGUAGES</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
+            <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-3 md:gap-4">
               {[
                 { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
                 { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
@@ -397,10 +397,10 @@ export default function Home() {
               ].map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                  className="flex flex-col items-center justify-center p-3 md:p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
                 >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                  <skill.icon className="text-3xl sm:text-4xl md:text-5xl mb-2 md:mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-xs sm:text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -409,7 +409,7 @@ export default function Home() {
           {/* FRAMEWORKS / RUNTIMES */}
           <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
             <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">FRAMEWORKS / RUNTIMES</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-4">
               {[
                 { icon: SiReact, name: 'React', color: '#61DAFB' },
                 { icon: SiNextdotjs, name: 'Next.js', color: '#FFFFFF' },
@@ -419,10 +419,10 @@ export default function Home() {
               ].map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                  className="flex flex-col items-center justify-center p-3 md:p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
                 >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                  <skill.icon className="text-3xl sm:text-4xl md:text-5xl mb-2 md:mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-xs sm:text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -431,7 +431,7 @@ export default function Home() {
           {/* MACHINE LEARNING */}
           <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
             <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">MACHINE LEARNING</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3 md:gap-4">
               {[
                 { icon: SiPytorch, name: 'PyTorch', color: '#EE4C2C' },
                 { icon: SiNumpy, name: 'NumPy', color: '#013243' },
@@ -442,10 +442,10 @@ export default function Home() {
               ].map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                  className="flex flex-col items-center justify-center p-3 md:p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
                 >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                  <skill.icon className="text-3xl sm:text-4xl md:text-5xl mb-2 md:mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-xs sm:text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -454,7 +454,7 @@ export default function Home() {
           {/* DATABASES / BACKEND SERVICES */}
           <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
             <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">DATABASES / BACKEND SERVICES</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
+            <div className="flex-1 grid grid-cols-3 gap-3 md:gap-4">
               {[
                 { icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
                 { icon: SiSqlite, name: 'SQLite', color: '#003B57' },
@@ -462,10 +462,10 @@ export default function Home() {
               ].map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                  className="flex flex-col items-center justify-center p-3 md:p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
                 >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                  <skill.icon className="text-3xl sm:text-4xl md:text-5xl mb-2 md:mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-xs sm:text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
             </div>
@@ -474,7 +474,7 @@ export default function Home() {
           {/* CLOUD & DEVOPS */}
           <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
             <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">CLOUD & DEVOPS</h3>
-            <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="flex-1 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-3 md:gap-4">
               {[
                 { icon: SiVercel, name: 'Vercel', color: '#FFFFFF' },
                 { icon: SiRender, name: 'Render', color: '#46E3B7' },
@@ -484,10 +484,10 @@ export default function Home() {
               ].map((skill) => (
                 <div
                   key={skill.name}
-                  className="flex flex-col items-center justify-center p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
+                  className="flex flex-col items-center justify-center p-3 md:p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-purple-500 hover:scale-105 transition-all duration-300"
                 >
-                  <skill.icon className="text-5xl mb-3" style={{ color: skill.color }} />
-                  <span className="text-white text-sm font-medium">{skill.name}</span>
+                  <skill.icon className="text-3xl sm:text-4xl md:text-5xl mb-2 md:mb-3" style={{ color: skill.color }} />
+                  <span className="text-white text-xs sm:text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
             </div>
