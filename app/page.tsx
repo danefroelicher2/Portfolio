@@ -136,11 +136,11 @@ export default function Home() {
             Dane Froelicher
           </h1>
           <nav>
-            <ul className="flex gap-6">
+            <ul className="flex gap-1 sm:gap-4 md:gap-6">
               <li>
                 <a
                   href="#home"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #home
                 </a>
@@ -148,7 +148,7 @@ export default function Home() {
               <li>
                 <a
                   href="#projects"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #projects
                 </a>
@@ -156,7 +156,7 @@ export default function Home() {
               <li>
                 <a
                   href="#skills"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #skills
                 </a>
@@ -164,7 +164,7 @@ export default function Home() {
               <li>
                 <a
                   href="#experience"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="hidden sm:flex text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] items-center text-sm sm:text-base"
                 >
                   #experience
                 </a>
@@ -172,7 +172,7 @@ export default function Home() {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="hidden sm:flex text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] items-center text-sm sm:text-base"
                 >
                   #about
                 </a>
@@ -180,7 +180,7 @@ export default function Home() {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #contact
                 </a>
@@ -200,10 +200,10 @@ export default function Home() {
           fill="purple"
         />
 
-        <div className="container mx-auto px-6 h-screen flex flex-col lg:flex-row items-center pt-20">
+        <div className="container mx-auto px-4 sm:px-6 min-h-screen pt-20 pb-8 lg:py-0 flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-0">
           {/* LEFT SIDE - Text Content */}
           <div className="flex-1 lg:pr-12 relative z-10 flex flex-col justify-center">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
               <span className="text-white">Welcome, I&apos;m </span>
               <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
                 Dane Froelicher
@@ -214,19 +214,19 @@ export default function Home() {
               Developer &amp; Automator
             </h2>
 
-            <p className="text-gray-300 text-lg md:text-xl mb-8 max-w-2xl">
+            <p className="text-gray-300 text-base md:text-lg lg:text-xl mb-8 max-w-2xl">
               I&apos;m a software developer passionate about building intelligent systems
               that solve real problems. I have experience in machine learning,
               automation, full-stack development, and data analytics.
             </p>
 
-            {/* CTA Buttons — UNCHANGED */}
-            <div className="flex gap-6">
+            {/* CTA Buttons */}
+            <div className="flex gap-4 md:gap-6 flex-wrap">
               <a
                 href="/Dane_Froelicher_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="px-6 py-3 md:px-8 md:py-4 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-lg hover:bg-purple-600 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-base md:text-lg"
               >
                 View Resume
               </a>
@@ -234,7 +234,7 @@ export default function Home() {
                 href="https://danefroelicher2.github.io/NewBlog/index.html"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 bg-transparent border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300"
+                className="px-6 py-3 md:px-8 md:py-4 min-h-[48px] flex items-center bg-transparent border-2 border-purple-500 text-purple-400 font-semibold rounded-lg hover:bg-purple-500 hover:text-white hover:scale-105 transition-all duration-300 text-base md:text-lg"
               >
                 View Blog
               </a>
@@ -242,7 +242,7 @@ export default function Home() {
           </div>
 
           {/* RIGHT SIDE - 3D Interactive */}
-          <div className="flex-1 relative h-[500px] lg:h-[700px] xl:h-[800px] w-full scale-110 lg:scale-125">
+          <div className="flex-1 relative h-[350px] sm:h-[400px] lg:h-[700px] xl:h-[800px] w-full scale-110 lg:scale-125">
             <SplineScene
               scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
               className="w-full h-full"
@@ -284,33 +284,33 @@ export default function Home() {
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-12 max-w-6xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-8 md:gap-12 max-w-6xl mx-auto">
           {/* Project 1: Chess Engine */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center w-full sm:w-auto">
             <a
               href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+              className="block w-full sm:w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
             >
               {/* Image Area */}
-              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
+              <div className="h-56 sm:h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
                 <Image
                   src="/images/chess.png?v=2"
                   alt="Chess Engine"
                   fill
                   className="object-cover object-[center_bottom]"
-                  sizes="540px"
+                  sizes="(max-width: 640px) 100vw, 540px"
                   unoptimized
                 />
               </div>
 
               {/* Content Area */}
-              <div className="p-8 bg-gray-800">
-                <h3 className="text-3xl font-bold text-white mb-4">
+              <div className="p-4 md:p-8 bg-gray-800">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">
                   Chess Engine
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
+                <p className="text-gray-400 leading-relaxed text-sm md:text-base lg:text-lg">
                   C++ chess engine combining classical hand-coded evaluation with neural network inference. Trained a PyTorch model on 100K+ master-level games, converted to ONNX, and integrated into production C++ engine deployed on Render. Users can toggle between classical and ML evaluation modes via clean interface.
                 </p>
               </div>
@@ -321,38 +321,39 @@ export default function Home() {
               href="https://danefroelicher2.github.io/NewBlog/discourse.html#chess-engine-ml"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
+              className="mt-4 md:mt-6 px-6 py-3 md:px-8 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-base md:text-lg"
             >
               Learn More
             </a>
           </div>
 
           {/* Project 2: Conversationalist AI */}
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center w-full sm:w-auto">
             <a
               href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+              className="block w-full sm:w-[540px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
             >
               {/* Image Area */}
-              <div className="h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
+              <div className="h-56 sm:h-80 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
                 <Image
                   src="/images/ai.png"
                   alt="Conversationalist AI"
                   fill
                   className="object-cover object-[center_bottom]"
-                  sizes="540px"
+                  sizes="(max-width: 640px) 100vw, 540px"
                 />
               </div>
 
               {/* Content Area */}
-              <div className="p-8 bg-gray-800">
-                <h3 className="text-3xl font-bold text-white mb-4">
+              <div className="p-4 md:p-8 bg-gray-800">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-3 md:mb-4">
                   Conversationalist AI
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  Voice-driven conversationalist AI with real-time speech processing pipeline. Integrated OpenAI Whisper for transcription, local Llama 3.1 LLM (0.18-0.58s response times via Ollama), and PostgreSQL for persistent memory. Features voice authentication, bcrypt security, and context-aware dialogue using PyAudio/pyttsx3.                </p>
+                <p className="text-gray-400 leading-relaxed text-sm md:text-base lg:text-lg">
+                  Voice-driven conversationalist AI with real-time speech processing pipeline. Integrated OpenAI Whisper for transcription, local Llama 3.1 LLM (0.18-0.58s response times via Ollama), and PostgreSQL for persistent memory. Features voice authentication, bcrypt security, and context-aware dialogue using PyAudio/pyttsx3.
+                </p>
               </div>
             </a>
 
@@ -361,7 +362,7 @@ export default function Home() {
               href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 px-8 py-3 bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-lg"
+              className="mt-4 md:mt-6 px-6 py-3 md:px-8 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-base md:text-lg"
             >
               Learn More
             </a>
@@ -382,8 +383,8 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto space-y-6">
           {/* LANGUAGES */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">LANGUAGES</h3>
+          <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">LANGUAGES</h3>
             <div className="flex-1 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-4">
               {[
                 { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
@@ -406,8 +407,8 @@ export default function Home() {
           </div>
 
           {/* FRAMEWORKS / RUNTIMES */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">FRAMEWORKS / RUNTIMES</h3>
+          <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">FRAMEWORKS / RUNTIMES</h3>
             <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {[
                 { icon: SiReact, name: 'React', color: '#61DAFB' },
@@ -428,8 +429,8 @@ export default function Home() {
           </div>
 
           {/* MACHINE LEARNING */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">MACHINE LEARNING</h3>
+          <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">MACHINE LEARNING</h3>
             <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
               {[
                 { icon: SiPytorch, name: 'PyTorch', color: '#EE4C2C' },
@@ -451,8 +452,8 @@ export default function Home() {
           </div>
 
           {/* DATABASES / BACKEND SERVICES */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">DATABASES / BACKEND SERVICES</h3>
+          <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">DATABASES / BACKEND SERVICES</h3>
             <div className="flex-1 grid grid-cols-2 md:grid-cols-3 gap-4">
               {[
                 { icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
@@ -471,8 +472,8 @@ export default function Home() {
           </div>
 
           {/* CLOUD & DEVOPS */}
-          <div className="flex items-start gap-8">
-            <h3 className="text-2xl font-semibold text-white w-64 flex-shrink-0 pt-2">CLOUD & DEVOPS</h3>
+          <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-8">
+            <h3 className="text-xl lg:text-2xl font-semibold text-white w-full lg:w-64 lg:flex-shrink-0 lg:pt-2">CLOUD & DEVOPS</h3>
             <div className="flex-1 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
               {[
                 { icon: SiVercel, name: 'Vercel', color: '#FFFFFF' },
@@ -505,9 +506,9 @@ export default function Home() {
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-8 items-start">
           {/* Job 1: P.L. Marketing */}
-          <div className="h-full bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
+          <div className="h-full bg-gray-800 border-l-4 border-purple-500 rounded-lg p-4 md:p-8 shadow-lg">
             {/* Header: Company and Duration */}
             <div className="flex justify-between items-baseline mb-2">
               <h3 className="text-2xl font-bold text-white">P.L. Marketing</h3>
@@ -543,7 +544,7 @@ export default function Home() {
           </div>
 
           {/* Job 2: Siemens */}
-          <div className="h-full bg-gray-800 border-l-4 border-purple-500 rounded-lg p-8 shadow-lg">
+          <div className="h-full bg-gray-800 border-l-4 border-purple-500 rounded-lg p-4 md:p-8 shadow-lg">
             {/* Header: Company and Duration */}
             <div className="flex justify-between items-baseline mb-2">
               <h3 className="text-2xl font-bold text-white">Siemens</h3>
@@ -589,9 +590,9 @@ export default function Home() {
 
         <div className="max-w-6xl mx-auto">
           {/* Two Column Layout */}
-          <div className="flex gap-16 items-center">
-            {/* LEFT SIDE: Image (40%) */}
-            <div className="w-[40%] flex-shrink-0">
+          <div className="flex flex-col lg:flex-row gap-8 lg:gap-16 items-center">
+            {/* LEFT SIDE: Image */}
+            <div className="w-full max-w-sm lg:w-[40%] lg:flex-shrink-0 mx-auto lg:mx-0">
               <div className="relative rounded-xl overflow-hidden shadow-2xl border-2 border-purple-500/20">
                 <Image
                   src="/images/me.jpeg"
@@ -603,18 +604,18 @@ export default function Home() {
               </div>
             </div>
 
-            {/* RIGHT SIDE: Content (60%) */}
-            <div className="w-[60%] space-y-8">
+            {/* RIGHT SIDE: Content */}
+            <div className="w-full lg:w-[60%] space-y-6 lg:space-y-8 text-center lg:text-left">
               {/* Section 1: Intro */}
               <div>
-                <p className="text-xl text-gray-200 leading-relaxed font-light">
+                <p className="text-base md:text-xl text-gray-200 leading-relaxed font-light max-w-3xl mx-auto lg:mx-0">
                   I'm a software developer passionate about building intelligent systems that solve real problems. I have experience in automation, machine learning, full-stack development, and data analytics.
                 </p>
               </div>
 
               {/* Section 2: Background */}
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
                   <span>📚</span> Background
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
@@ -624,7 +625,7 @@ export default function Home() {
 
               {/* Section 3: What I Do */}
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
                   <span>💻</span> What I Build
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
@@ -634,7 +635,7 @@ export default function Home() {
 
               {/* Section 4: Beyond Code */}
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
                   <span>✨</span> Beyond Code
                 </h3>
                 <p className="text-gray-300 leading-relaxed">
