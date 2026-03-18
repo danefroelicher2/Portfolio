@@ -131,16 +131,16 @@ export default function Home() {
     <div className="min-h-screen">
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm dark:bg-gray-900/80">
-        <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        <div className="container mx-auto px-4 py-4 flex items-center justify-start sm:justify-between">
           <h1 className="hidden sm:block text-2xl font-bold text-gray-900 dark:text-white">
             Dane Froelicher
           </h1>
           <nav className="w-full sm:w-auto">
-            <ul className="flex justify-between sm:justify-start gap-1 sm:gap-4 md:gap-6">
+            <ul className="flex gap-2 sm:gap-4 md:gap-6">
               <li>
                 <a
                   href="#home"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-1 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #home
                 </a>
@@ -148,7 +148,7 @@ export default function Home() {
               <li>
                 <a
                   href="#projects"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-1 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #projects
                 </a>
@@ -156,7 +156,7 @@ export default function Home() {
               <li>
                 <a
                   href="#skills"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-1 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #skills
                 </a>
@@ -164,7 +164,7 @@ export default function Home() {
               <li>
                 <a
                   href="#experience"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-1 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #experience
                 </a>
@@ -172,7 +172,7 @@ export default function Home() {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-1 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #about
                 </a>
@@ -180,7 +180,7 @@ export default function Home() {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-1 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #contact
                 </a>
