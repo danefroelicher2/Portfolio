@@ -132,11 +132,11 @@ export default function Home() {
       {/* Fixed Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm dark:bg-gray-900/80">
         <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+          <h1 className="hidden sm:block text-2xl font-bold text-gray-900 dark:text-white">
             Dane Froelicher
           </h1>
-          <nav>
-            <ul className="flex gap-1 sm:gap-4 md:gap-6">
+          <nav className="w-full sm:w-auto">
+            <ul className="flex justify-between sm:justify-start gap-1 sm:gap-4 md:gap-6">
               <li>
                 <a
                   href="#home"
@@ -164,7 +164,7 @@ export default function Home() {
               <li>
                 <a
                   href="#experience"
-                  className="hidden sm:flex text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #experience
                 </a>
@@ -172,7 +172,7 @@ export default function Home() {
               <li>
                 <a
                   href="#about"
-                  className="hidden sm:flex text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] items-center text-sm sm:text-base"
+                  className="text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white transition-colors py-2 px-2 sm:px-3 min-h-[48px] flex items-center text-sm sm:text-base"
                 >
                   #about
                 </a>
