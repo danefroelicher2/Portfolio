@@ -204,7 +204,8 @@ export default function Home() {
           {/* LEFT SIDE - Text Content */}
           <div className="flex-1 lg:pr-12 relative z-10 flex flex-col justify-center">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-4">
-              <span className="text-white">Welcome, I&apos;m </span>
+              <span className="text-white">Welcome, I&apos;m</span>
+              <br />
               <span className="bg-gradient-to-r from-purple-400 to-pink-600 text-transparent bg-clip-text">
                 Dane Froelicher
               </span>
