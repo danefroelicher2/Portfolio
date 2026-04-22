@@ -310,7 +310,7 @@ export default function Home() {
                   Mercia
                 </h3>
                 <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                  iOS app live on the App Store that builds a long-term memory of you. Powered by Groq's Llama 3.3 70B, it extracts structured insights from daily questions and conversations—tracking your values, beliefs, goals, and patterns. Built with React Native, Expo, Node.js, and Supabase, with a memory condensation system that automatically deduplicates and deepens what the AI knows about you over time. Freemium with AI chat unlocked at $4.99/month.
+                  iOS app live on the App Store that builds a long-term memory of you. Powered by Groq's Llama 3.3 70B, it extracts structured insights from daily questions and conversations—tracking your values, beliefs, goals, and patterns. Built with React Native, Expo, Node.js, and Supabase. Freemium with AI chat unlocked at $4.99/month.
                 </p>
               </div>
             </a>
