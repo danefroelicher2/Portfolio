@@ -284,29 +284,66 @@ export default function Home() {
           <span className="text-purple-500 w-full max-w-md border-t border-purple-500"></span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 max-w-7xl mx-auto">
-          {/* Project 1: Chess Engine */}
-          <div className="flex flex-col items-center w-full sm:w-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
+          {/* Project 1: Mercia */}
+          <div className="flex flex-col items-center">
+            <a
+              href="#"
+              className="flex flex-col flex-1 w-full bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+            >
+              {/* Image Area */}
+              <div className="h-56 sm:h-64 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden flex-shrink-0">
+                <Image
+                  src="/images/mercia.png"
+                  alt="Mercia"
+                  fill
+                  className="object-cover object-center"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+                />
+              </div>
+
+              {/* Content Area */}
+              <div className="flex-1 p-4 md:p-6 bg-gray-800">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
+                  Mercia
+                </h3>
+                <p className="text-gray-400 leading-relaxed text-sm md:text-base">
+                  iOS app live on the App Store that builds a long-term memory of you. Powered by Groq's Llama 3.3 70B, it extracts structured insights from daily questions and conversations—tracking your values, beliefs, goals, and patterns. Built with React Native, Expo, Node.js, and Supabase, with a memory condensation system that automatically deduplicates and deepens what the AI knows about you over time. Freemium with AI chat unlocked at $4.99/month.
+                </p>
+              </div>
+            </a>
+
+            {/* Learn More Button */}
+            <a
+              href="#"
+              className="mt-4 px-6 py-3 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-base"
+            >
+              Learn More
+            </a>
+          </div>
+
+          {/* Project 2: Chess Engine */}
+          <div className="flex flex-col items-center">
             <a
               href="https://danefroelicher2.github.io/ChessEngine2/chess.html"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full sm:w-[380px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+              className="flex flex-col flex-1 w-full bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
             >
               {/* Image Area */}
-              <div className="h-56 sm:h-64 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
+              <div className="h-56 sm:h-64 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/chess.png?v=2"
                   alt="Chess Engine"
                   fill
                   className="object-cover object-[center_bottom]"
-                  sizes="(max-width: 640px) 100vw, 380px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                   unoptimized
                 />
               </div>
 
               {/* Content Area */}
-              <div className="p-4 md:p-6 bg-gray-800">
+              <div className="flex-1 p-4 md:p-6 bg-gray-800">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
                   Chess Engine
                 </h3>
@@ -327,27 +364,27 @@ export default function Home() {
             </a>
           </div>
 
-          {/* Project 2: Conversationalist AI */}
-          <div className="flex flex-col items-center w-full sm:w-auto">
+          {/* Project 3: Conversationalist AI */}
+          <div className="flex flex-col items-center">
             <a
               href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full sm:w-[380px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
+              className="flex flex-col flex-1 w-full bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
             >
               {/* Image Area */}
-              <div className="h-56 sm:h-64 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
+              <div className="h-56 sm:h-64 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden flex-shrink-0">
                 <Image
                   src="/images/ai.png"
                   alt="Conversationalist AI"
                   fill
                   className="object-cover object-[center_bottom]"
-                  sizes="(max-width: 640px) 100vw, 380px"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
                 />
               </div>
 
               {/* Content Area */}
-              <div className="p-4 md:p-6 bg-gray-800">
+              <div className="flex-1 p-4 md:p-6 bg-gray-800">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
                   Conversationalist AI
                 </h3>
@@ -362,43 +399,6 @@ export default function Home() {
               href="https://danefroelicher2.github.io/NewBlog/tech.html#conversationalist-ai"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 px-6 py-3 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-base"
-            >
-              Learn More
-            </a>
-          </div>
-
-          {/* Project 3: Mercia */}
-          <div className="flex flex-col items-center w-full sm:w-auto">
-            <a
-              href="#"
-              className="block w-full sm:w-[380px] bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
-            >
-              {/* Image Area */}
-              <div className="h-56 sm:h-64 relative bg-gray-700 hover:opacity-90 transition-opacity duration-300 overflow-hidden">
-                <Image
-                  src="/images/mercia.png"
-                  alt="Mercia"
-                  fill
-                  className="object-cover object-center"
-                  sizes="(max-width: 640px) 100vw, 380px"
-                />
-              </div>
-
-              {/* Content Area */}
-              <div className="p-4 md:p-6 bg-gray-800">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 md:mb-3">
-                  Mercia
-                </h3>
-                <p className="text-gray-400 leading-relaxed text-sm md:text-base">
-                  iOS app live on the App Store that builds a long-term memory of you. Powered by Groq's Llama 3.3 70B, it extracts structured insights from daily questions and conversations—tracking your values, beliefs, goals, and patterns. Freemium with AI chat unlocked at $4.99/month.
-                </p>
-              </div>
-            </a>
-
-            {/* Learn More Button */}
-            <a
-              href="#"
               className="mt-4 px-6 py-3 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-base"
             >
               Learn More
