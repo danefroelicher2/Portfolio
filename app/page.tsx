@@ -606,41 +606,35 @@ export default function Home() {
             </div>
 
             {/* RIGHT SIDE: Content */}
-            <div className="w-full lg:w-[60%] space-y-6 lg:space-y-8 text-center lg:text-left">
-              {/* Section 1: Intro */}
+            <div className="w-full lg:w-[60%] space-y-8 lg:space-y-10 text-center lg:text-left">
+              {/* Background */}
               <div>
-                <p className="text-base md:text-xl text-gray-200 leading-relaxed font-light max-w-3xl mx-auto lg:mx-0">
-                  I'm a software developer passionate about building intelligent systems that solve real problems. I have experience in automation, machine learning, full-stack development, and data analytics.
-                </p>
-              </div>
-
-              {/* Section 2: Background */}
-              <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
+                <h3 className="text-base uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
                   <span>📚</span> Background
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                   I studied Computer Information Systems and Finance at the University of Louisville, where I developed a deep interest in autonomous systems, artificial intelligence, and software architecture.
                 </p>
               </div>
 
-              {/* Section 3: What I Do */}
+              {/* What I Build */}
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
+                <h3 className="text-base uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
                   <span>💻</span> What I Build
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
                   I'm driven by projects that grow beyond their creation—scalable, repeatable, and built for long-term improvement. The question for me is no longer <em>why</em> I can create, but <em>what</em> I can create next.
                 </p>
               </div>
 
-              {/* Section 4: Beyond Code */}
+              {/* Beyond Code */}
               <div>
-                <h3 className="text-sm uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
+                <h3 className="text-base uppercase tracking-wider text-purple-400 font-semibold mb-3 flex items-center justify-center lg:justify-start gap-2">
                   <span>✨</span> Beyond Code
                 </h3>
-                <p className="text-gray-300 leading-relaxed">
-                  When I'm not coding, you'll find me working out, playing chess, reading, and watching One Piece.              </p>
+                <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                  When I'm not coding, you'll find me working out, playing chess, reading, and watching One Piece.
+                </p>
               </div>
             </div>
           </div>
