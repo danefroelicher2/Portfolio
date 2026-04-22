@@ -9,7 +9,6 @@ import {
   SiTypescript,
   SiPython,
   SiCplusplus,
-  SiRust,
   SiHtml5,
   SiCss3,
   SiReact,
@@ -391,10 +390,10 @@ export default function Home() {
                 { icon: SiJavascript, name: 'JavaScript', color: '#F7DF1E' },
                 { icon: SiTypescript, name: 'TypeScript', color: '#3178C6' },
                 { icon: SiPython, name: 'Python', color: '#3776AB' },
-                { icon: SiCplusplus, name: 'C++', color: '#00599C' },
-                { icon: SiRust, name: 'Rust', color: '#CE422B' },
                 { icon: BiData, name: 'SQL', color: '#CC2927' },
+                { icon: SiCplusplus, name: 'C++', color: '#00599C' },
                 { icon: SiHtml5, name: 'HTML', color: '#E34F26' },
+                { icon: SiCss3, name: 'CSS', color: '#1572B6' },
               ].map((skill) => (
                 <div
                   key={skill.name}
