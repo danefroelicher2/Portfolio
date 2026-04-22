@@ -288,7 +288,9 @@ export default function Home() {
           {/* Project 1: Mercia */}
           <div className="flex flex-col items-center">
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/mercia-ai-companion/id6759628595"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex flex-col flex-1 w-full bg-gray-800 rounded-lg overflow-hidden shadow-lg border border-gray-700 hover:border-purple-500 transition-all duration-300"
             >
               {/* Image Area */}
@@ -315,7 +317,9 @@ export default function Home() {
 
             {/* Learn More Button */}
             <a
-              href="#"
+              href="https://apps.apple.com/us/app/mercia-ai-companion/id6759628595"
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-4 px-6 py-3 min-h-[48px] flex items-center bg-purple-500 text-white font-semibold rounded-md hover:bg-purple-600 transition-colors duration-300 shadow-md hover:shadow-lg text-base"
             >
               Learn More
